@@ -12,6 +12,5 @@ if (!targetDir) {
 }
 
 console.log(`Reading EXIF data from ${targetDir}`);
-const exifReader = new ExiftoolExifReader({ targetDir });
-const exifData = exifReader.getExifData();
-console.log(exifData);
+const exifReader = new ExiftoolExifReader();
+const exifData = exifReader.getExifData({ targetDir });
