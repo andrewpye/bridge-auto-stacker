@@ -1,7 +1,7 @@
 import { execSync } from 'child_process';
 import path from 'path';
 
-const extensionsToExclude = ['.xmp'];
+const extensionsToExclude = ['.xmp', '.acr'];
 
 export default class ExiftoolExifReader {
   getExifData({ targetDir }) {
