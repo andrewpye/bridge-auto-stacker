@@ -1,5 +1,6 @@
 import ExiftoolExifReader from './exif-readers/exiftool.js';
 import StackCalculator from './stack-calculator.js';
+import BridgeStackWriter from './stack-writers/bridge.js';
 
 const defaultToleranceSeconds = 3;
 const [_, scriptPath, targetDir, toleranceSeconds = defaultToleranceSeconds] = process.argv;
@@ -15,5 +16,10 @@ const exifData = exifReader.getExifData({ targetDir });
 
 console.log('Calculating image stacks');
 const stackCalculator = new StackCalculator();
-const stackData = stackCalculator.getStacks({ exifData, toleranceSeconds });
-console.log(stackData);
+const stacks = stackCalculator.getStacks({ exifData, toleranceSeconds });
+
+console.log('Updating Bridge');
+const stackWriter = new BridgeStackWriter({ targetDir });
+stackWriter.write({ targetDir, stacks });
+
+console.log('Done!');
