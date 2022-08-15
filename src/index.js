@@ -1,3 +1,5 @@
+import ExiftoolExifReader from './exif-readers/exiftool.js';
+
 const [_, __, targetDir] = process.argv;
 
 function showUsage() {
@@ -8,3 +10,8 @@ if (!targetDir) {
   showUsage();
   process.exit();
 }
+
+console.log(`Reading EXIF data from ${targetDir}`);
+const exifReader = new ExiftoolExifReader({ targetDir });
+const exifData = exifReader.getExifData();
+console.log(exifData);
