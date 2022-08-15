@@ -22,6 +22,10 @@ export default class StackCalculator {
       lastFileFinishTime = fileData.date + (1_000 * fileData.shutterSpeedSeconds);
     });
 
+    if (currentStack.length > 1) {
+      stacks.push(currentStack);
+    }
+
     return stacks;
   }
 }
