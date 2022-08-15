@@ -1,0 +1,10 @@
+{
+  "name": "bridge-auto-stacker",
+  "version": "1.0.0",
+  "description": "Automatically stack images in Adobe Bridge based on capture time",
+  "main": "src/index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "andrew_pye@hotmail.co.uk",
+  "license": "MIT"
+}
