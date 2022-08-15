@@ -25,7 +25,7 @@ This is slightly cumbersome. Unfortunately I wasn't able to find a way to run th
 3. Command-click directory in Finder.
 4. Select `Quick Actions -> Auto-stack for Bridge`.
 
-There is probably a similar way to configure a context menu action on other operating systems.
+There is probably a similar way to configure a context menu action on other operating systems. I have exported this workflow and provided it [in this repository](https://github.com/andrewpye/bridge-auto-stacker/tree/main/Auto-stack%20for%20Bridge.workflow/) for reference.
 
 ## Disclaimer/caveats
 This is a quick project intended for personal use. I haven't tested it much even in my own use case, and as such I expect that it will not work perfectly in all cases. Some known things that are less than ideal:
